@@ -14,6 +14,7 @@ pipeline{
             steps{
                 sh 'whoami'
                 sh 'sw_vers'
+                sh 'npm install'
                 //sh 'npm -v'
                 // sh 'npm i -g aws-cdk typescript'
                 // sh 'apt install nodejs npm' 
