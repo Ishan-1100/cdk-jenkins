@@ -12,8 +12,8 @@ pipeline{
 
         stage("installing dependancies"){
             steps{
+                sh 'ls'
                 sh 'whoami'
-                sh 'brew install node'
                 // sh 'sudo -u jenkins which npm'
                 // sh 'npm install'
                 //sh 'npm -v'
