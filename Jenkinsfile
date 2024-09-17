@@ -32,8 +32,8 @@ pipeline{
 
         // stage("cdk code deploy"){
         //     steps{
-        //         sh 'cdk bootstrap'
-        //         sh 'cdk apply'
+                sh 'cdk bootstrap'
+                sh 'cdk apply'
         //     }
         }
 
