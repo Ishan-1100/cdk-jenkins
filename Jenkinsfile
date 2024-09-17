@@ -12,18 +12,19 @@ pipeline{
 
         stage("installing dependancies"){
             steps{
-                sh 'apt install openjdk-11-jdk'
-                sh 'apt update'
-                sh 'apt install nodejs npm' 
-                sh 'npm install -g aws-cdk'
+                sh 'pwd'
+                sh 'whoami'
+                // sh 'npm i -g aws-cdk typescript'
+                // sh 'apt install nodejs npm' 
+                // sh 'npm install -g aws-cdk'
             }
         }
 
-        stage("cdk code deploy"){
-            steps{
-                sh 'cdk bootstrap'
-                sh 'cdk apply'
-            }
+        // stage("cdk code deploy"){
+        //     steps{
+        //         sh 'cdk bootstrap'
+        //         sh 'cdk apply'
+        //     }
         }
 
         
