@@ -12,7 +12,7 @@ pipeline{
 
         stage("installing dependancies"){
             steps{
-                sh 'sudo npm install -g aws-cdk'
+                sh 'npm install -g aws-cdk'
             }
         }
 
