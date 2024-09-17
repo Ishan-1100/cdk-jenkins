@@ -24,7 +24,7 @@ pipeline{
                 //sh 'npm version'
                 // sh 'npm i -g aws-cdk typescript'
                 sh 'tsc -v'
-                sh 'cdk --version'
+                
                 // sh 'npm install'
                 // sh 'apt install nodejs npm' 
                 // sh 'npm install -g aws-cdk'
@@ -33,6 +33,7 @@ pipeline{
 
         stage("cdk code deploy"){
             steps{
+                sh 'cdk --version'
                 // sh 'cdk bootstrap'
                 //sh 'cdk deploy --require-approval never'
                 
