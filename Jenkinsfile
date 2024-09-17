@@ -13,8 +13,8 @@ pipeline{
         stage("installing dependancies"){
             steps{
                 sh 'whoami'
-                sh 'sw_vers'
-                sh 'sudo -u jenkins which npm'
+                sh 'brew install node'
+                // sh 'sudo -u jenkins which npm'
                 // sh 'npm install'
                 //sh 'npm -v'
                 // sh 'npm i -g aws-cdk typescript'
