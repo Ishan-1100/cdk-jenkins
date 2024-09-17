@@ -22,10 +22,10 @@ pipeline{
                 // sh 'sudo -u jenkins which npm'
                 // sh 'npm install'
                 //sh 'npm version'
-                sh 'npm i -g aws-cdk typescript'
+                // sh 'npm i -g aws-cdk typescript'
                 sh 'tsc -v'
                 sh 'cdk --version'
-                sh 'npm install'
+                // sh 'npm install'
                 // sh 'apt install nodejs npm' 
                 // sh 'npm install -g aws-cdk'
             }
