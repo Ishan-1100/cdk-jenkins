@@ -16,12 +16,12 @@ pipeline{
         //     }
         // }
 
-        // stage("git checkout stage"){
-        //     steps{
-        //         sh 'cdk bootstrap'
-        //         sh 'cdk apply'
-        //     }
-        // }
+        stage("git checkout stage"){
+            steps{
+                sh 'cdk bootstrap'
+                sh 'cdk apply'
+            }
+        }
 
         
     }
