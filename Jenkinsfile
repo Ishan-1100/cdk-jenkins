@@ -1,20 +1,23 @@
 pipeline{
     agent any
+    tools{
+        nodejs "nodejs"
+    }
 
     stages{
 
-        stage("git checkout stage"){
-            steps{
-                echo "checkout done"
-                sh 'pwd'
-            }
-        }
+        // stage("git checkout stage"){
+        //     steps{
+        //         echo "checkout done"
+        //         sh 'pwd'
+        //     }
+        // }
 
         stage("installing dependancies"){
             steps{
-                sh 'ls'
-                sh 'whoami'
-                sh 'echo $PATH'
+                // sh 'ls'
+                // sh 'whoami'
+                // sh 'echo $PATH'
                 sh 'npm version'
                 // sh 'sudo -u jenkins which npm'
                 // sh 'npm install'
