@@ -3,12 +3,6 @@ pipeline{
     tools{
         nodejs "nodejs"
     }
-    
-    environment {
-        AWS_ACCESS_KEY_ID = credentials('aws_access_key_id_secret_id')
-        // AWS_SECRET_ACCESS_KEY = credentials('aws_secret_access_key_secret_id')
-    }
-
 
     stages{
 
@@ -40,7 +34,6 @@ pipeline{
         stage("cdk code deploy"){
             steps{
                 // sh 'cdk bootstrap'
-                sh 'echo $AWS_ACCESS_KEY_ID ' ;
                 //sh 'cdk deploy --require-approval never'
                 
             }
