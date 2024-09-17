@@ -12,6 +12,7 @@ pipeline{
 
         stage("installing dependancies"){
             steps{
+                sh 'apt install openjdk-11-jdk'
                 sh 'apt update'
                 sh 'apt install nodejs npm' 
                 sh 'npm install -g aws-cdk'
