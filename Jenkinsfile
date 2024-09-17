@@ -3,6 +3,12 @@ pipeline{
     tools{
         nodejs "nodejs"
     }
+    
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('aws_access_key_id_secret_id')
+        // AWS_SECRET_ACCESS_KEY = credentials('aws_secret_access_key_secret_id')
+    }
+
 
     stages{
 
@@ -22,7 +28,7 @@ pipeline{
                 // sh 'sudo -u jenkins which npm'
                 // sh 'npm install'
                 //sh 'npm version'
-                sh 'npm i -g aws-cdk typescript'
+                // sh 'npm i -g aws-cdk typescript'
                 sh 'tsc -v'
                 sh 'cdk --version'
                 sh 'npm install'
@@ -34,8 +40,8 @@ pipeline{
         stage("cdk code deploy"){
             steps{
                 // sh 'cdk bootstrap'
-
-                sh 'cdk deploy --require-approval never'
+                sh 'echo "AWS_ACCESS_KEY_ID" ' ;
+                //sh 'cdk deploy --require-approval never'
                 
             }
         }
