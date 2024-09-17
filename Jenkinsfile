@@ -12,8 +12,8 @@ pipeline{
 
         stage("installing dependancies"){
             steps{
-                sh 'pwd'
                 sh 'whoami'
+                sh 'npm -v'
                 // sh 'npm i -g aws-cdk typescript'
                 // sh 'apt install nodejs npm' 
                 // sh 'npm install -g aws-cdk'
