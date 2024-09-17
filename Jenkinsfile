@@ -10,11 +10,11 @@ pipeline{
             }
         }
 
-        // stage("installing dependancies"){
-        //     steps{
-        //         sh ''
-        //     }
-        // }
+        stage("installing dependancies"){
+            steps{
+                sh 'sudo npm install -g aws-cdk'
+            }
+        }
 
         stage("cdk code deploy"){
             steps{
