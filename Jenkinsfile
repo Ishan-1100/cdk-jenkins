@@ -16,7 +16,7 @@ pipeline{
         //     }
         // }
 
-        stage("git checkout stage"){
+        stage("cdk code deploy"){
             steps{
                 sh 'cdk bootstrap'
                 sh 'cdk apply'
