@@ -28,7 +28,7 @@ pipeline{
                 // sh 'sudo -u jenkins which npm'
                 // sh 'npm install'
                 //sh 'npm version'
-                // sh 'npm i -g aws-cdk typescript'
+                sh 'npm i -g aws-cdk typescript'
                 sh 'tsc -v'
                 sh 'cdk --version'
                 sh 'npm install'
@@ -40,7 +40,7 @@ pipeline{
         stage("cdk code deploy"){
             steps{
                 // sh 'cdk bootstrap'
-                sh 'echo "AWS_ACCESS_KEY_ID" ' ;
+                sh 'echo $AWS_ACCESS_KEY_ID ' ;
                 //sh 'cdk deploy --require-approval never'
                 
             }
