@@ -37,7 +37,7 @@ pipeline{
                 // sh 'aws --version'
                 // sh 'cdk bootstrap'
                 //sh 'cdk deploy -y'
-                sh 'cdk destroy --require-approval never'
+                sh ' yes | cdk destroy'
             }
         }
 
