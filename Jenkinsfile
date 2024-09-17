@@ -14,6 +14,7 @@ pipeline{
             steps{
                 sh 'ls'
                 sh 'whoami'
+                sh 'echo $PATH'
                 // sh 'sudo -u jenkins which npm'
                 // sh 'npm install'
                 //sh 'npm -v'
