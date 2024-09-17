@@ -34,6 +34,7 @@ pipeline{
         stage("cdk code deploy"){
             steps{
                 sh 'cdk --version'
+                sh 'aws --version'
                 // sh 'cdk bootstrap'
                 //sh 'cdk deploy --require-approval never'
                 
